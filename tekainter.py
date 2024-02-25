@@ -1,4 +1,4 @@
-import pygame_testing
+import Nim_graafiline
 from tkinter import *
 from tkinter import ttk
 root = Tk()
@@ -33,7 +33,7 @@ def startgame():
     if not valid:
         return
     root.destroy()
-    pygame_testing.main(int(a), int(b))
+    Nim_graafiline.main(int(a), int(b))
 
 
 ttk.Button(frm, text="Start", command=startgame).grid(column=1, row=6)

@@ -125,6 +125,9 @@ def main(laius, pikkus):
             if n == seis[i]:
                 nupujoonistus(i, n)
 
+    font = pygame.font.SysFont(None, 70)
+    text1 = font.render("Võit", True, "blue")
+    text2 = font.render("Kaotus", True, "red")
     aken.blit(laud, (0, 0))
     pygame.display.flip()
     tmer = None
@@ -160,6 +163,7 @@ def main(laius, pikkus):
                         nupujoonistus(w, e)
                         seis[w] = e
                         if sum(seis) == 0:
+                            laud.blit(text1, (320, 320))
                             #joonistus mängija... võitis
                             number = 0
                         else:
@@ -180,6 +184,7 @@ def main(laius, pikkus):
                     if n == seis[i]:
                         nupujoonistus(i, n)
             if sum(seis) == 0:
+                laud.blit(text2, (320, 320))
                 # joonistus mängija... võitis
                 number = 0
             else:
